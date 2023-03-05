@@ -32,7 +32,7 @@ import Display from "./Display";
 //       console.error(error);
 //     }
 //   };
-const Register = () => {
+const Signup = () => {
 
   // let navigate = useNavigate()
 
@@ -129,7 +129,7 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Signup;
 // import React, { useState } from "react";
 // import {  Link } from "react-router-dom";
 // import { useNavigate } from "react-router-dom";
