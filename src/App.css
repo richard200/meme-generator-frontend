@@ -36,3 +36,60 @@
     transform: rotate(360deg);
   }
 }
+
+
+body{
+  background-color: #EFE6B3;
+}
+
+.header{
+  font-size: 40px;
+  margin-top: auto;
+}
+
+input[type=text], select {
+  border-radius: 50px;
+  margin: 10px;
+  background-color: #EFE6B3;
+  padding: 30px;
+  display:inline-block ;
+  margin-top: 20px;
+  width: 700px;
+}
+
+.new-message {
+  border-radius: 50px;
+  margin: 10px;
+  background-color: #EFE6B3;
+  padding: 20px;
+}
+
+.form{
+  display:inline-block ;
+  margin-top: 20px;
+  width: 800px;
+}
+
+input[type=email], select {
+  border-radius: 50px;
+  margin: 10px;
+  background-color: #EFE6B3;
+  padding: 30px;
+  display:inline-block ;
+  margin-top: 20px;
+  width: 700px;
+}
+
+input[type=password], select {
+  border-radius: 50px;
+  margin: 10px;
+  background-color: #EFE6B3;
+  padding: 30px;
+  display:inline-block ;
+  margin-top: 20px;
+  width: 700px;
+}
+
+.main{
+  width: auto;
+}
