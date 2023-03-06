@@ -37,7 +37,7 @@ function Display() {
 
   useEffect(() => {
 
-    fetch("https://meme-generator-backend.onrender.com//memes")
+    fetch("https://meme-generator-backend.onrender.com/memes")
       .then((resp) => resp.json())
       .then((data) => {
         setMemes(data)
