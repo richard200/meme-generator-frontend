@@ -46,7 +46,7 @@ const Signup = () => {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:9292/auth/register", {
+    fetch("https://meme-generator-backend.onrender.com/auth/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

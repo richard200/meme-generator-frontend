@@ -10,7 +10,7 @@ let [name, setName] = useState("")
   function handleSubmit(e) {
     e.preventDefault();
 
-    fetch("http://localhost:9292/memes/create", {
+    fetch("https://meme-generator-backend.onrender.com/memes/create", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

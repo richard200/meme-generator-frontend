@@ -93,3 +93,15 @@ input[type=password], select {
 .main{
   width: auto;
 }
+
+.top_text{
+  font-size: 25px;
+}
+
+.bottom_text{
+  font-size: 25px;
+}
+
+.fullmeme{
+  font-size: 25px;
+}

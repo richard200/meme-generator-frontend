@@ -9,7 +9,7 @@ function MemeCard({ meme}) {
 
     function handleDeleteClick(e) {
         e.preventDefault();
-        fetch(`http://localhost:9292/memes/destroy/${meme.id}`, {
+        fetch(`https://meme-generator-backend.onrender.com/memes/destroy/${meme.id}`, {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",
@@ -49,7 +49,7 @@ function MemeCard({ meme}) {
 
   return (
 
- <div className="card col-6 mt-5 h-100 shadow p-3 mb-5 bg-body rounded"
+ <div className="card col-6 mt-5 h-100 shadow p-3 mb-5 mb-sm-5 bg-body rounded"
  key={meme.id}>
     <div className="card-body" >
    
@@ -57,14 +57,14 @@ function MemeCard({ meme}) {
         
      <p className="top_text">Top Text: {meme.text_top}</p>
        
-     <p className="category">Bottom Text: {meme.text_bottom}</p>
+     <p className="bottom_text">Bottom Text: {meme.text_bottom}</p>
      <br>
      </br>
      <br></br>
 
-     <h5 className="category">Full Meme: {meme.text_top},  {meme.text_bottom}</h5>
+     <h5 className="fullmeme">Full Meme: {meme.text_top},  {meme.text_bottom}</h5>
 
-     <button onClick={handleDeleteClick}>
+     <button className="btn btn-danger" onClick={handleDeleteClick}>
             <span role="img" aria-label="delete">
             Delete Meme:  🗑
             </span>
