@@ -54,8 +54,9 @@ const Signup = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-       full_name, email, password
+       full_name, email, password,
       }),
+
     }).then((response) => response.json())
     .then((data) => {
       // Handle successful login

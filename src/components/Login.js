@@ -51,7 +51,7 @@ const Login = ({onLogin}) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-       email, password
+       email, password,
       }),
     }).then((response) => response.json())
     .then((data) => {
