@@ -52,7 +52,7 @@ const Login = ({onLogin}) => {
       },
       body: JSON.stringify({
        email, password,
-      }),
+      })
     }).then((response) => response.json())
     .then((data) => {
       // Handle successful login
@@ -82,7 +82,7 @@ const Login = ({onLogin}) => {
           className="form-style"
           placeholder="Your Email"
           autoComplete="off"
-          onChange={e => SetEmail( e.target.value )}
+          onChange={e => SetEmail( e.target.value )} required
         />
       </div>
       <div className="form-group mt-2">
@@ -95,7 +95,7 @@ const Login = ({onLogin}) => {
           id="password"
           autoComplete="off"
           onChange={e =>
-            SetPassword( e.target.value )}
+            SetPassword( e.target.value )} required
           
         />
       </div>

@@ -38,13 +38,12 @@
 }
 
 
-body{
-  background-color: #EFE6B3;
-}
 
 .header{
   font-size: 40px;
   margin-top: auto;
+  color: white;
+ 
 }
 
 input[type=text], select {

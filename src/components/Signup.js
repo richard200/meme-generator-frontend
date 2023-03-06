@@ -53,9 +53,10 @@ const Signup = () => {
       headers: {
         "Content-Type": "application/json",
       },
+
       body: JSON.stringify({
        full_name, email, password,
-      }),
+      })
 
     }).then((response) => response.json())
     .then((data) => {
@@ -87,7 +88,7 @@ const Signup = () => {
           className="form-style"
           placeholder="Your Full Name"
           autoComplete="off"
-          onChange={e => SetFullname( e.target.value )}
+          onChange={e => SetFullname( e.target.value )} required
         />
       </div>
 
@@ -100,7 +101,7 @@ const Signup = () => {
           className="form-style"
           placeholder="Your Email"
           autoComplete="off"
-          onChange={e => SetEmail( e.target.value )}
+          onChange={e => SetEmail( e.target.value )} required
         />
       </div>
       <div className="form-group mt-2">
@@ -113,7 +114,7 @@ const Signup = () => {
           id="password"
           autoComplete="off"
           onChange={e =>
-            SetPassword( e.target.value )}
+            SetPassword( e.target.value )}  required
           
         />
       </div>

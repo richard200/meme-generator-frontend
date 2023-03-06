@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Login from './components/Login';
 import Display from './components/Display';
+import Home from './components/Home';
 
 import { Switch, Route } from 'react-router-dom';
 import SignUp from './components/Signup';
@@ -25,10 +26,11 @@ function App() {
     <div style={{ 
       backgroundImage: `url("https://raw.githubusercontent.com/Zackazt/MemeCreator/master/src/bg.jpg")` 
     }} className="App">
-      <h1 className='header'>Memes </h1>
+      <h1 className='header'>Meme Generator</h1>
      
       <Switch>
-      <Route exact path="/" component={SignUp} />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/register" component={SignUp} />
       <Route path="/login" component={Login}  />
         <Route path="/memes" component={Display} onLogin={handleLogin} />
       
