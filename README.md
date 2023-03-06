@@ -151,7 +151,12 @@ Database schema definitions.
 6. `/memes/update/:id` - Update an existing meme.
 7. `/memes/destroy/:id` - Delete a Meme .
 
-
+## LICENSE
+The following are demo images/screenshots of how the site looks like
+<img src="./demo1.png" alt="demo1">
+<img src="./demo2.png" alt="demo2">
+<img src="./demo3.png" alt="demo3">
+<img src="./demo4.png" alt="demo4">
 
 ## LICENSE
 This repository is distributed under the ISC License
