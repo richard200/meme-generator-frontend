@@ -1,71 +1,162 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![Linux](https://svgshare.com/i/Zhy.svg)](https://svgshare.com/i/Zhy.svg)
+[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
-## Available Scripts
+# Meme Generator
+Meme Generator is a basic API built with ruby's Sinatra DSL. 
 
-In the project directory, you can run:
+This project  shows the power of the DSL in building server-side applications quickly.
 
-### `npm start`
+The application has been built with the MVC design pattern.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Pre-Requisites
+In order to use this repository you will need the following:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Operating System **(Windows `10+`, Linux `3.8+`, or MacOS X `10.7+`)**
+- RAM >= 4GB
+- Free Space >= 2GB
 
-### `npm run build`
+## Built With
+This application has been built with the following tools:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![ruby](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white)
+![sqlite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+![bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Ruby `v2.7.+`**
+- **SQlite3 `v1.6`**
+- **ActiveRecord `v7.0.4`**
+- **Rake `v13.0.6`**
+- **Puma `v6.1`**
+- **rerun `v0.14`**
+- **Sinatra `v3.0.5`**
+- **Bootstrap `v5.3.0`**
+- **ERB `v4.0`**
 
-### `npm run eject`
+## Setup
+You can setup this repository by following this manual
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository
+    ```{shell}
+   git clone https://github.com/richard200/meme-generator-frontend
+   ```
+2. Ensure the ruby gems are setup in your machine
+    ```{shell}
+   bundle install
+   ```
+3. Perform any pending database migrations
+   ```{shell}
+   rake db:migrate
+   ```
+4. Run the application
+    ```{shell}
+    rake start
+    ```
+5. Open the application from your browser
+    ```
+   http://localhost:9292
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+6. The backend for the application is here: https://github.com/richard200/meme-generator-backend
+   ```
+   
+## Application
+This application is a simple web API that allows users to:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Register a new account.
+- Log in to existing account.
+- Create memes.
+- Update individual memes.
+- View all memes.
+- Delete a meme.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### MODELS
+Database schema definitions.
 
-## Learn More
+#### MEMES
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| COLUMN      | DATA TYPE                                       | DESCRIPTION                         | 
+|-------------|-------------------------------------------------|-------------------------------------|
+| id          | Integer                                         | Unique identifier.                  |
+| name        | String                                          | The name of the meme.               |
+| text_top    | String                                          | First part of the meme.             |
+| text_bottom | Date                                            | Second part of the meme             |
+| status      | ENUM `[CREATED, ONGOING, COMPLETED, CANCELLED]` | TThe status of the meme.            |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+#### USERS
+| COLUMN        | DATA TYPE | DESCRIPTION                           | 
+|---------------|-----------|---------------------------------------|
+| id            | Integer   | Unique identifier.                    |
+| full_name     | String    | User's full name.                     |
+| password_hash | String    | User's password hashed with `BCrypt`. |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### ROUTES
 
-### Making a Progressive Web App
+1. `/hello` - Presents a simple welcome message.
+2. `/auth/register` - Create a new user account.
+   
+   ```{json}
+   ## REQUEST BODY
+  {
+  "full_name": "Richard Ngeti",
+  "email": "rich@gmail.com",
+  "password": "12345"
+}  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. `/auth/login` - Log in a user using email and password.
 
-### Advanced Configuration
+   ```{json}
+   ## REQUEST BODY
+   {
+     "email": "rich@gmail.com",
+  "password": "12345"
+}  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+4. `/memes/create` - Add a new meme.
 
-### Deployment
+   ```{json}
+   ## REQUEST BODY
+ {
+  "name": "mymeme",
+  "text_top": "watu si wajinga",
+  "text_bottom": "watu si wajinga bwana"
+}  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+5. `/memes` - List all memes.
 
-### `npm run build` fails to minify
+   ```{json}
+   ## RESPONSE SAMPLE
+ [
+  {
+    "id": 1,
+    "name": "mymeme",
+    "text_top": "watu si wajinga",
+    "text_bottom": "watu si wajinga bwana",
+    "status": "CREATED"
+  },
+  {
+    "id": 2,
+    "name": "mymeme",
+    "text_top": "watu si wajinga",
+    "text_bottom": "watu si wajinga bwana",
+    "status": "CREATED"
+  }
+]   ```
+6. `/memes/update/:id` - Update an existing meme.
+7. `/memes/destroy/:id` - Delete a Meme .
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# meme-generator-frontend
+
+
+## LICENSE
+This repository is distributed under the ISC License
+
+## Author
+This repository is maintained by:
+
+- [Richard Ngeti](https://github.com/richard200) 
