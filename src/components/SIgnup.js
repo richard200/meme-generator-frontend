@@ -48,6 +48,8 @@ const Signup = () => {
 
     fetch("https://meme-generator-backend.onrender.com/auth/register", {
       method: "POST",
+      crossorigin: true,
+      mode: "no-cors",
       headers: {
         "Content-Type": "application/json",
       },

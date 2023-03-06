@@ -12,6 +12,8 @@ let [name, setName] = useState("")
 
     fetch("https://meme-generator-backend.onrender.com/memes/create", {
       method: "POST",
+      crossorigin: true,
+      mode: "no-cors",
       headers: {
         "Content-Type": "application/json",
       },
