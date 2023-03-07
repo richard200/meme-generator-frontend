@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import MemeCollection from "./MemeCollection";
 import NewMeme from "./NewMeme";
 import Search from "./Search";
+import {Link } from 'react-router-dom'
 // import BotArmy from "./YourBotArmy";
 
 function Display() {
@@ -65,7 +66,20 @@ function Display() {
 //     setBot((bot)=>botRemoved)
 // }
   return (
+
+
+
+
+
     <div>
+
+<span className="sign-up-button">
+    <Link to="/" className="showing-sign">
+        <span className="signing-now">Logout</span>
+
+    </Link>
+
+</span>
 <Search handleSearch={handleSearch}/>
 <NewMeme/>
  <MemeCollection 
