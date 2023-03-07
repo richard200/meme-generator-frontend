@@ -3,8 +3,9 @@ import React, { useState } from "react";
 
 function MemeCard({ meme}) {
     let [id, Setid] = useState("")
-//       let [text_top, setTextTop] = useState("");
-//   let [text_bottom, setTextBottom] = useState("");
+  //   let [name, setName] = useState("")
+  //     let [text_top, setTextTop] = useState("");
+  // let [text_bottom, setTextBottom] = useState("");
 
 
     function handleDeleteClick(e) {
@@ -27,25 +28,28 @@ function MemeCard({ meme}) {
     
       }
 
-    //   function handleUpdateMeme(e) {
-    //         e.preventDefault();
+      // function handleUpdateMeme(e) {
+      //       e.preventDefault();
         
-    //         fetch(`http://localhost:9292/memes/update/${meme.id}`, {
-    //           method: "PATCH",
-    //           headers: {
-    //             "Content-Type": "application/json",
-    //           },
-    //           body: JSON.stringify({
-    //             text_top: text_top,
-    //             text_bottom: text_bottom
-    //           }),
-    //         })
-    //         .then((r) => r.json())
-    //         .then((data) => {
-    //          setTextTop(text_top)
-    //          setTextBottom(text_bottom)
-    //         });
-    //     }
+      //       fetch(`https://meme-generator-backend.onrender.com/memes/update/${meme.id}`, {
+      //         method: "PATCH",
+      //         headers: {
+      //           "Content-Type": "application/json",
+      //         },
+      //         body: JSON.stringify({
+      //           name: name,
+      //           text_top: text_top,
+      //           text_bottom: text_bottom
+      //         }),
+      //       })
+      //       .then((r) => r.json())
+      //       .then((data) => {
+      //         Setid(id)
+      //         setName(name)
+      //        setTextTop(text_top)
+      //        setTextBottom(text_bottom)
+      //       });
+      //   }
 
   return (
 
@@ -70,11 +74,7 @@ function MemeCard({ meme}) {
             </span>
           </button>
 
-          {/* <button onClick={handleUpdateMeme}>
-            <span role="img" aria-label="delete">
-             Update
-            </span>
-          </button> */}
+          
 
   </div>
   </div>
