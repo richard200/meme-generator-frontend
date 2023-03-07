@@ -41,8 +41,8 @@ function Display() {
 
     fetch("https://meme-generator-backend.onrender.com/memes?q=" + query, )
       .then((resp) => resp.json())
-      .then((memes) => {
-        setMemes(memes)
+      .then((data) => {
+        setMemes(data)
       })
 
   }, [query])
