@@ -74,13 +74,13 @@ function MemeCard({ meme}) {
             </span>
           </button>
 
-          <span className="sign-up-button">
+          {/* <span className="sign-up-button">
                                             <Link to="/update" className="showing-sign">
                                                 <span className="signing-now">Update Meme</span>
 
                                             </Link>
 
-                                        </span>
+                                        </span> */}
 
   </div>
   </div>

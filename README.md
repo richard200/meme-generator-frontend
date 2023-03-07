@@ -153,9 +153,18 @@ Database schema definitions.
 
 ## LICENSE
 The following are demo images/screenshots of how the site looks like
+
+<h1>This is the landing page where you can either click on the link to register an account or login if you have an account</h1>
 <img src="./demo1.png" alt="demo1">
+
+<h1>The page where you regsiter an account</h1>
 <img src="./demo2.png" alt="demo2">
+
+<h1>The page where you login</h1>
 <img src="./demo3.png" alt="demo3">
+
+<h1>The page where you can create, view and delete a meme. In order for you to see the changes when you create or 
+delete a meme, you must refresh the page.</h1>
 <img src="./demo4.png" alt="demo4">
 
 ## LICENSE
