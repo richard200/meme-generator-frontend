@@ -5,7 +5,7 @@ function Search({handleSearch}) {
     <div className="search">
       <input
         type="text"
-        placeholder="Search your Recent Transactions"
+        placeholder="Search for your memes..."
         onChange={handleSearch}
       />
     </div>

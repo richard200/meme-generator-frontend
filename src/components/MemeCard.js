@@ -15,7 +15,7 @@ function MemeCard({ meme}) {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            id: id
+            id,
           
           }),
         }).then((r) => r.json())
