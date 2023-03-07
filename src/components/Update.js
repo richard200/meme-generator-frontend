@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function UpdateMeme({meme}) {
+function Update({meme}) {
 //   const [body, setBody] = useState("");
 
 let [name, setName] = useState("")
@@ -71,4 +71,4 @@ Second Part: <input value={text_bottom}
   );
 }
 
-export default UpdateMeme;
+export default Update;

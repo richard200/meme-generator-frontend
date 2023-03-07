@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import {Link} from 'react-router-dom'
 
 function MemeCard({ meme}) {
     let [id, Setid] = useState("")
@@ -74,7 +74,13 @@ function MemeCard({ meme}) {
             </span>
           </button>
 
-          
+          <span className="sign-up-button">
+                                            <Link to="/update" className="showing-sign">
+                                                <span className="signing-now">Update Meme</span>
+
+                                            </Link>
+
+                                        </span>
 
   </div>
   </div>

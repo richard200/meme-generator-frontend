@@ -3,6 +3,7 @@ import './App.css';
 import Login from './components/Login';
 import Display from './components/Display';
 import Home from './components/Home';
+import Update from './components/Update';
 
 import { Switch, Route } from 'react-router-dom';
 import SignUp from './components/Signup';
@@ -32,6 +33,7 @@ function App() {
       <Route exact path="/" component={Home} />
       <Route exact path="/register" component={SignUp} />
       <Route path="/login" component={Login}  />
+      <Route path="/update" component={Update}  />
         <Route path="/memes" component={Display} onLogin={handleLogin} />
       
         
