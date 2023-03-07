@@ -30,6 +30,14 @@ const Home = () => {
 
                                         </span>
 
+                                        <span className="sign-up-button">
+                                            <Link to="/login" className="showing-sign">
+                                                <span className="signing-now">Login now</span>
+
+                                            </Link>
+
+                                        </span>
+
                                     </div>
 
                                 </div>
