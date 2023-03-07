@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import MemeCollection from "./MemeCollection";
 import NewMeme from "./NewMeme";
+import Search from "./Search";
 // import BotArmy from "./YourBotArmy";
 
 function Display() {
 
   let [memes, setMemes] = useState([])
+  let [query, setQuery] = useState("")
 
 // let [name, setName] = useState("")
 // let [text_top, setTextTop] = useState("");
@@ -37,13 +39,17 @@ function Display() {
 
   useEffect(() => {
 
-    fetch("https://meme-generator-backend.onrender.com/memes", )
+    fetch("https://meme-generator-backend.onrender.com/memes?q=" + query, )
       .then((resp) => resp.json())
-      .then((data) => {
-        setMemes(data)
+      .then((memes) => {
+        setMemes(memes)
       })
 
-  }, [])
+  }, [query])
+
+  function handleSearch(e) {
+    setQuery(e.target.value)
+  }
 
   
 
@@ -60,7 +66,7 @@ function Display() {
 // }
   return (
     <div>
-
+<Search handleSearch={handleSearch}/>
 <NewMeme/>
  <MemeCollection 
             memes= {memes}
